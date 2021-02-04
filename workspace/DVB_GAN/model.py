@@ -13,6 +13,7 @@ K.clear_session()
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
+
 latent_dim = 200
 input_shape = (168, 224, 1)
 
@@ -160,12 +161,6 @@ def construct_generator():
     generator.add(BatchNormalization(momentum=0.5))
     generator.add(Activation('relu'))
 
-    # generator.add(Conv2DTranspose(filters=32, kernel_size=(7, 7),
-    #                               strides=(2, 2), padding='same',
-    #                               data_format='channels_last',
-    #                               kernel_initializer=weights_initializer))
-    # generator.add(BatchNormalization(momentum=0.5))
-    # generator.add(Activation('relu'))
 
     generator.add(Conv2DTranspose(filters=1, kernel_size=(7, 7),
                                   strides=(2, 2), padding='same',
@@ -177,7 +172,6 @@ def construct_generator():
     generator.compile(loss=wasserstein_loss,
                       optimizer=optimizer,
                       metrics=None)
-    print('***************construct_generator: ', generator.summary())
     return generator
 
 
