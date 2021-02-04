@@ -101,9 +101,9 @@ Structure of Project " Spectrum Monitoring of Radio Digital Video Broadcasting B
 simulated dataset：`platform:MATLAB R2020a`
    link:https://pan.baidu.com/s/163mROSdDrfjDI6xLlZTzAg  19uy 
 
-   == Run  _commdvbt_  in command window, and receive signal as S 
+     == Run  _commdvbt_  in command window, and receive signal as S 
    
-   == Process original data and extract spectrum:
+     == Process original data and extract spectrum:
    
      signal = S.signals.values;
      [s1 s2 s3]=size(signal);
@@ -141,8 +141,9 @@ simulated dataset：`platform:MATLAB R2020a`
      
 
 true dataset：
-   link:https://pan.baidu.com/s/1d3l2XBuVFSb1nO3mTbnnQg  d8dq
-   
+
+link:https://pan.baidu.com/s/1d3l2XBuVFSb1nO3mTbnnQg  d8dq
+
 ## 4.Training
    
     BS = 32
